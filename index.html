@@ -67,44 +67,7 @@
 .inline-logo-md{max-height:25px}
 .inline-logo-lg{max-height:35px}
    
-img[src*="logo"],img[alt*="Milestone"],.inline-logo,.logo-img{background:transparent!important;background-color:transparent!important;mix-blend-mode:screen!important;filter:none!important;border:none!important;outline:none!important;box-shadow:none!important;-webkit-mix-blend-mode:screen!important}
-</style>
-</head>
-<body>
-<div class="sidebar">
-    <div class="logo">
-        <img src="assets/logo.png" alt="Milestone SMS" class="logo-img" onerror="this.style.display='none'">
-        <div class="logo-text"><span>Milestone</span> SMS</div>
-    </div>
-    <nav>
-        <a class="active" onclick="showSection('dashboard')" title="Dashboard - Overview and statistics">
-            <i class="fas fa-tachometer-alt"></i> Dashboard
-        </a>
-        <a onclick="showSection('schools')" title="Schools - Register and manage">
-            <i class="fas fa-school"></i> Schools
-        </a>
-        <a onclick="showSection('licenses')" title="Activation Codes - Pending and active">
-            <i class="fas fa-key"></i> Activation Codes
-        </a>
-        <a onclick="showSection('export')" title="Export - Download data">
-            <i class="fas fa-download"></i> Export
-        </a>
-    </nav>
-</div>
-<div class="main-content">
-    <div class="top-bar">
-        <h2>Programmer Dashboard</h2>
-        <div class="header-btn-group">
-            <button class="btn-sm" onclick="window.print()" style="background:#95a5a6" title="Print"><i class="fas fa-print"></i> Print</button>
-            <button class="btn-sm" onclick="toggleDarkMode()" style="background:#555" title="Dark Mode"><i class="fas fa-moon"></i> Dark</button>
-        </div>
-    </div>
-    <div id="dashboardSection">
-        <div class="stats-grid"><div class="stat-card"><div class="stat-number" id="totalSchools">0</div><div class="stat-label">Total Schools</div></div><div class="stat-card"><div class="stat-number" id="activeSchools">0</div><div class="stat-label">Active Licenses</div></div><div class="stat-card"><div class="stat-number" id="inactiveSchools">0</div><div class="stat-label">Pending Activation</div></div><div class="stat-card"><div class="stat-number" id="totalTeachers">0</div><div class="stat-label">Teachers</div></div><div class="stat-card"><div class="stat-number" id="totalStudents">0</div><div class="stat-label">Students</div></div></div>
-        <div class="card"><h2>📈 Recent Activity</h2><div id="recentActivity"></div></div>
-        <div class="card"><h2>⚠️ Expiring Soon (30 Days)</h2><div id="expiringLicenses"></div></div>
-    </div>
-    <div id="schoolsSection" style="display:none"><div class="card"><h2>➕ Register New School</h2><div class="form-grid"><div class="form-group"><label>🏫 School Name *</label><input type="text" id="schoolName" placeholder="e.g., Ghana High School"></div><div class="form-group"><label>👤 Headmaster Name *</label><input type="text" id="headmasterName" placeholder="Full name"></div><div class="form-group"><label>📧 Headmaster Email *</label><input type="email" id="headmasterEmail" placeholder="headmaster@school.edu.gh"></div><div class="form-group"><label>📞 Phone</label><input type="tel" id="headmasterPhone" placeholder="024xxxxxxx"></div><div class="form-group"><label>📅 License Duration</label><select id="licenseDuration"><option value="30">1 Month</option><option value="90" selected>3 Months</option><option value="180">6 Months</option><option value="365">1 Year</option></select></div></div><button class="btn" onclick="registerSchool()">🏫 Register & Generate Code</button><div id="registrationResult" style="margin-top:1rem"></div></div><div class="card"><h2>📋 All Registered Schools</h2><div class="search-container"><input type="text" id="schoolSearchInput" class="search-input" placeholder="🔍 Search schools..." onkeyup="searchSchools()"><button class="search-btn" onclick="searchSchools()" title="Search"><i class="fas fa-search"></i></button><button class="clear-search" id="clearSchoolSearch" onclick="clearSchoolSearch()" title="Clear">✕</button><select id="schoolFilterStatus" onchange="searchSchools()" style="padding:.7rem;border:1px solid var(--input-border);border-radius:.5rem;background:var(--input-bg);color:var(--text)"><option value="all">All Status</option><option value="active">Active Only</option><option value="inactive">Inactive Only</option></select></div><div id="searchStats" class="search-stats"></div><table id="schoolsTable"><thead><tr><th>School</th><th>Code</th><th>Headmaster</th><th>Expiry</th><th>Status</th><th>Actions</th></tr></thead><tbody id="schoolsTableBody"></tbody></table></div></div>
+img[src*="logo"],img[alt*="Milestone"],.inline-logo,.logo-img{background:transparent!important;background-color:transparent!important;filter:none!important;border:none!important;outline:none!important;box-shadow:none!important;-webkit-border:1px solid var(--input-border);border-radius:.5rem;background:var(--input-bg);color:var(--text)"><option value="all">All Status</option><option value="active">Active Only</option><option value="inactive">Inactive Only</option></select></div><div id="searchStats" class="search-stats"></div><table id="schoolsTable"><thead><tr><th>School</th><th>Code</th><th>Headmaster</th><th>Expiry</th><th>Status</th><th>Actions</th></tr></thead><tbody id="schoolsTableBody"></tbody></table></div></div>
     <div id="licensesSection" style="display:none"><div class="card"><h2>🔑 Pending Activation Codes</h2><div id="pendingLicenses"></div></div><div class="card"><h2>✅ Active Licenses</h2><div id="activeLicenses"></div></div></div>
     <div id="exportSection" style="display:none"><div class="card"><h2>📥 Export Data</h2><div class="btn-group"><button class="btn" onclick="exportJSON()" title="Export as JSON">📊 Export JSON</button><button class="btn btn-success" onclick="exportCSV()" title="Export as CSV">📈 Export CSV</button><button class="btn btn-warning" onclick="clearAll()" title="Clear all data">⚠️ Clear All Data</button></div></div></div>
     <div class="brand-footer">© 2024 <span>Milestone SMS</span> • Powered by <span>Milestone Initiative</span></div>
@@ -150,4 +113,5 @@ window.registerSchool=registerSchool;window.deleteSchool=deleteSchool;window.sho
 </script>
 </body>
 </html>
+
 
