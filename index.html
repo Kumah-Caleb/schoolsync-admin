@@ -12,7 +12,7 @@
         body{font-family:'Segoe UI',Roboto,sans-serif;background:var(--bg);min-height:100vh;color:var(--text);transition:all .3s}
         .sidebar{position:fixed;left:0;top:0;width:260px;height:100%;background:linear-gradient(180deg,#1a472a,#0d2818);padding:2rem 1rem;color:white;z-index:100}
         .logo{padding-bottom:1.5rem;border-bottom:1px solid rgba(255,255,255,0.1);margin-bottom:2rem;text-align:center}
-        .logo img{max-height:120px;width:auto;display:block;margin:0 auto .5rem}
+        .logo img{width:200px;height:auto}
         .logo-text{font-size:1.3rem;font-weight:bold}
         .logo-text span{color:var(--accent)}
         .sidebar nav a{display:block;padding:.8rem 1rem;color:rgba(255,255,255,0.7);text-decoration:none;border-radius:.5rem;margin-bottom:.5rem;transition:all .3s;cursor:pointer}
@@ -61,18 +61,18 @@
         .brand-footer{text-align:center;padding:1rem;color:#888;font-size:.75rem;margin-top:2rem}
         .brand-footer span{color:var(--accent)}
         .inline-logo{vertical-align:middle;margin-right:5px;display:inline-block}
-        .inline-logo-sm{max-height:35px}
-        .inline-logo-md{max-height:35px}
-        .inline-logo-lg{max-height:50px}
+        .inline-logo-sm{max-height:none}
+        .inline-logo-md{max-height:none}
+        .inline-logo-lg{max-height:none}
         img[src*="logo"],.inline-logo,.logo-img{background:transparent!important;border:none!important;box-shadow:none!important}
         @media print{.sidebar,.btn,.toast,.search-container,.form-grid,.header-btn-group{display:none!important}.main-content{margin-left:0!important}.card{box-shadow:none!important;border:1px solid #ddd!important}body{background:white!important}}
         @media(max-width:768px){.sidebar{position:relative;width:100%;height:auto}.main-content{margin-left:0}}
-    .logo-display{max-height:120px!important;width:auto!important}.footer-logo{max-height:35px!important}n</style>
+    .logo-display{max-height:none!important;width:auto!important}.footer-logo{max-height:none!important}n</style>
 </head>
 <body>
 <div class="sidebar">
     <div class="logo">
-        <img src="assets/logo.png" alt="Milestone SMS" onerror="this.style.display='none';this.parentElement.querySelector('.logo-text').style.display='block'">
+        <img src="assets/logo.png" alt="Milestone SMS" style="width:200px;height:auto" onerror="this.style.display='none'">
         <div class="logo-text" style="display:none"><span>Milestone</span> SMS</div>
     </div>
     <nav>
@@ -183,4 +183,5 @@ window.registerSchool=registerSchool;window.deleteSchool=deleteSchool;window.sho
 </script>
 </body>
 </html>
+
 
