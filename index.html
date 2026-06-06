@@ -33,11 +33,11 @@
         .form-group label{display:block;font-weight:600;margin-bottom:.3rem;color:var(--text);font-size:.9rem}
         .form-group input,.form-group select{width:100%;padding:.7rem;border:1px solid var(--input-border);border-radius:.5rem;font-size:.95rem;background:var(--input-bg);color:var(--text)}
         .form-group input:focus,.form-group select:focus{outline:none;border-color:var(--accent)}
-        .btn{background:linear-gradient(225deg,#8db355,#e0c87a),#e67e22);color:white;border:none;padding:.7rem 1.5rem;border-radius:.5rem;cursor:pointer;font-weight:600;transition:transform .2s}
+        .btn{background:linear-gradient(135deg,#c8960a,#e67e22);color:white;border:none;padding:.7rem 1.5rem;border-radius:.5rem;cursor:pointer;font-weight:600;transition:transform .2s}
         .btn:hover{transform:translateY(-2px)}
-        .btn-danger{background:linear-gradient(225deg,#8db355,#e0c87a)}
-        .btn-success{background:linear-gradient(225deg,#8db355,#e0c87a)}
-        .btn-warning{background:linear-gradient(225deg,#8db355,#e0c87a)}
+        .btn-danger{background:linear-gradient(135deg,#e74c3c,#c0392b)}
+        .btn-success{background:linear-gradient(135deg,#2ecc71,#27ae60)}
+        .btn-warning{background:linear-gradient(135deg,#ffa502,#e67e22)}
         .btn-sm{padding:.3rem .8rem;font-size:.8rem}
         .btn-group{display:flex;gap:.5rem;flex-wrap:wrap}
         .search-container{display:flex;gap:.5rem;margin-bottom:1rem;align-items:center;flex-wrap:wrap}
@@ -60,20 +60,18 @@
         .empty-state{text-align:center;padding:2rem;color:#999}
         .brand-footer{text-align:center;padding:1rem;color:#888;font-size:.75rem;margin-top:2rem}
         .brand-footer span{color:var(--accent)}
-        .inline-logo{vertical-align:middle;margin-right:5px;display:inline-block}
-        .inline-logo-sm{max-height:none}
-        .inline-logo-md{max-height:none}
-        .inline-logo-lg{max-height:none}
+        .inline-logo{vertical-align:middle;margin-right:5px;display:inline-block}.inline-logo-sm{max-height:none}.inline-logo-md{max-height:none}.inline-logo-lg{max-height:none}
         img[src*="logo"],.inline-logo,.logo-img{background:transparent!important;border:none!important;box-shadow:none!important}
         @media print{.sidebar,.btn,.toast,.search-container,.form-grid,.header-btn-group{display:none!important}.main-content{margin-left:0!important}.card{box-shadow:none!important;border:1px solid #ddd!important}body{background:white!important}}
         @media(max-width:768px){.sidebar{position:relative;width:100%;height:auto}.main-content{margin-left:0}}
-    .logo-display{max-height:none!important;width:auto!important}.footer-logo{max-height:none!important}n</style>
+    .logo-display{max-height:none!important;width:auto!important}.footer-logo{max-height:none!important}
+</style>
 </head>
 <body>
 <div class="sidebar">
     <div class="logo">
         
-        <div class="logo-text" style="display:none"><span>Milestone</span> School Management System</div>
+        <div class="logo-text"><span style="color:#ffa502">Milestone</span> School Management System</div>
     </div>
     <nav>
         <a class="active" onclick="showSection('dashboard')" title="Dashboard"><i class="fas fa-tachometer-alt"></i> Dashboard</a>
@@ -183,6 +181,7 @@ window.registerSchool=registerSchool;window.deleteSchool=deleteSchool;window.sho
 </script>
 </body>
 </html>
+
 
 
 
